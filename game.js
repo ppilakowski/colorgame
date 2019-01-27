@@ -50,6 +50,7 @@ function setupSquares(){
                 resetButton.textContent = "Play Again?";
             } else {
                 this.style.backgroundColor = "#232323";
+                this.style.borderRadius = "50%";
                 messageDisplay.textContent = "Try Again";
             }
         });
@@ -62,6 +63,7 @@ function reset(){
     colorDisplay.textContent = pickedColor;
     for(var i = 0; i < squares.length; i++){
         squares[i].style.backgroundColor = colors[i];
+        squares[i].style.borderRadius = "15%";
         if(colors[i]){
             squares[i].style.display = "block"
             squares[i].style.backgroundColor = colors[i];
