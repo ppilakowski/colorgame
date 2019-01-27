@@ -21,9 +21,16 @@ function setupModeButtons(){
     for(var i = 0; i < modeButtons.length; i++) {
         modeButtons[i].addEventListener("click", function() {
             modeButtons[0].classList.remove("selected");
-            modeButtons[1].classList.remove("selected");
+            modeButtons[1].classList.remove("selected"); 
+            modeButtons[2].classList.remove("selected"); 
             this.classList.add("selected");
-            this.textContent === "Easy" ? numSquares = 3 :numSquares = 6;
+            if(this.textContent === "Easy"){
+                numSquares = 3;
+            }else if(this.textContent === "Hard"){
+                numSquares = 6;
+            } else {
+                numSquares = 9;
+            }
             reset();
         })
     }
