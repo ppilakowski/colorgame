@@ -8,6 +8,8 @@ var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset");
 var modeButtons = document.querySelectorAll(".mode");
 
+
+
 init();
 
 function init(){
@@ -47,10 +49,12 @@ function setupSquares(){
                 messageDisplay.textContent = "Correct!";
                 changeColors(clickedColor);
                 h1.style.backgroundColor = clickedColor;
+                success.play();
                 resetButton.textContent = "Play Again?";
             } else {
                 this.style.backgroundColor = "#232323";
                 this.style.borderRadius = "50%";
+                fail.play();
                 messageDisplay.textContent = "Try Again";
             }
         });
